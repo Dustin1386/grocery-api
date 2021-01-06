@@ -4,8 +4,8 @@ const morgan = require('morgan')
 const cors = require('cors')
 const helmet = require('helmet')
 const nodemon = require ('nodemon')
-const notesRouter = require('./notes-router')
-const foldersRouter = require('./folders-router')
+const itemsRouter = require('./items-router')
+const asileRouter = require('./asile-router')
 const { NODE_ENV } = require('./config')
 
 const app = express()
@@ -21,8 +21,8 @@ app.use(cors())
 app.get('/', (req,res)=>{
     res.send('Hello,world!')
 })
-app.use('/api/folders', foldersRouter)
-app.use('/api/notes', notesRouter)
+app.use('/api/items', itemsRouter)
+app.use('/api/asile', asileRouter)
 
 app.use(function errorHandler(error, req, res, next){
   let response
