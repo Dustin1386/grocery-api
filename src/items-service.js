@@ -1,32 +1,32 @@
-const NotesService = {
-    getAllNotes(knex) {
-        return knex('notes').select('*')
+const ItemsService = {
+    getAllItems(knex) {
+        return knex('items').select('*')
     },
-    insertNote(knex, newNote) {
+    insertItems(knex, newItems) {
         return knex
-            .insert(newNote)
-            .into('notes')
+            .insert(newItems)
+            .into('items')
             .returning('*')
             .then(rows => {
                 return rows[0]
             })
     },
     getById(knex, ID) {
-        return knex('notes')
+        return knex('items')
             .select('*')
             .where('id', ID)
             .first()
     },
-    deleteNote(knex, ID) {
-        return knex('notes')
+    deleteItems(knex, ID) {
+        return knex('items')
             .where('id', ID)
             .delete()
     },
-    updateNote(knex, ID, newData) {
-        return knex('notes')
+    updateItems(knex, ID, newData) {
+        return knex('items')
             .where('id', ID)
             .update(newData)
     }
 }
 
-module.exports = NotesService
+module.exports = ItemsService

@@ -5,7 +5,6 @@ const cors = require('cors')
 const helmet = require('helmet')
 const nodemon = require ('nodemon')
 const itemsRouter = require('./items-router')
-const asileRouter = require('./asile-router')
 const { NODE_ENV } = require('./config')
 
 const app = express()
@@ -22,7 +21,7 @@ app.get('/', (req,res)=>{
     res.send('Hello,world!')
 })
 app.use('/api/items', itemsRouter)
-app.use('/api/asile', asileRouter)
+
 
 app.use(function errorHandler(error, req, res, next){
   let response
@@ -32,7 +31,7 @@ app.use(function errorHandler(error, req, res, next){
     console.error(error)
     response ={messag:error.message, error}
   }
-  res.status(500).json(resonse)
+  res.status(500).json(response)
 })
 
 module.exports = app

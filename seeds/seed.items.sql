@@ -1,5 +1,5 @@
-INSERT INTO folder (name)
+INSERT INTO items (name, location)
 VALUES
-    ('Important'),
-    ('Super'),
-    ('Spangley');
+    ('Beef', '37'),
+    ('Cheese', '15'),
+    ('Cereal', '20');
