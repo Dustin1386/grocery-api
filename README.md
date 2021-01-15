@@ -37,30 +37,8 @@ getAllItems(knex) {
 
 A submission of a grocery item. Requires name and location.
 
-```
-[
-    {
-        "timestamp": "01:25:00",
-        "comment": "Crazy Loud",
-        "volume": "High",
-        "confirmations": 0,
-        "likes": 0,
-        "dislikes" 0,
-        "user_id": 1,
-        "media_id": "tt9397902",
-        "date_created": "2021-01-14T16:05:43.157Z"
-    }
-]
-```
 
 ### PATCH /api/timestamps/:ts_id
-
-A request to update a timestamp.
-
-### DELETE /api/timestamps/:ts_id
-
-A request to delete a timestamp.
-
 
 
 ### GET /api/barks
@@ -100,6 +78,6 @@ Returns an array of barks from the server.
 
 ##### Server
 
-- PostgreSQL# HollyWoof Server
+- PostgreSQL
 
 
