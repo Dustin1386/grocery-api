@@ -43,7 +43,7 @@ A submission of a grocery item. Requires name and location.
 
 ### GET /api/items
 
-Returns an array of barks from the server.
+Returns an array of items from the server.
 
 ### Example Response
 
