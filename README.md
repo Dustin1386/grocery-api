@@ -1,4 +1,4 @@
-# HollyWoof Server
+# Grocery App
 
 ##### Repositories
 
@@ -15,7 +15,7 @@ Heroku Server - Live Link - https://dashboard.heroku.com/apps/arcane-headland-93
 I frequently go to the grocery store and have a hard time finding certain items,I created this app to help solve that. 
 This app lets you enter the location of various products in the store and their location to make them easy to find. 
 
-![image](https://user-images.githubusercontent.com/55715053/104391907-f6982000-550e-11eb-8b72-f7ef17f44d29.png)
+![image](https://github.com/Dustin1386/grocery-api/blob/master/screenshot-grocery-fgiqtqu4w-vercel-app-1610742292840.png)
 
 ## API Documentation
 
