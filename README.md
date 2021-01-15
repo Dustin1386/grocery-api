@@ -19,7 +19,7 @@ This app lets you enter the location of various products in the store and their 
 
 ## API Documentation
 
-### GET /api/timestamps
+### GET /api/items
 
 Returns an array of items from the server.
 
@@ -33,15 +33,15 @@ getAllItems(knex) {
 
 
 
-### POST /api/timestamps
+### POST /api/items
 
 A submission of a grocery item. Requires name and location.
 
 
-### PATCH /api/timestamps/:ts_id
+### PATCH /api/items/:ts_id
 
 
-### GET /api/barks
+### GET /api/items
 
 Returns an array of barks from the server.
 
