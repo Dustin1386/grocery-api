@@ -16,12 +16,13 @@ app.use(morgan(morganOption))
 app.use(helmet())
 app.use(cors())
 
+//basic get route
 app.get('/', (req,res)=>{
     res.send('Hello,world!')
 })
 app.use('/api/items', itemsRouter)
 
-
+//error handling
 app.use(function errorHandler(error, req, res, next){
   let response
   if (NODE_ENV === 'production') {

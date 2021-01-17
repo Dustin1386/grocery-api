@@ -1,3 +1,4 @@
+-- seeds initial data
 INSERT INTO items (name, location)
 VALUES
     ('Beef', '37'),

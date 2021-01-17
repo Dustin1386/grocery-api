@@ -5,13 +5,13 @@ const ItemsService = require('./items-service')
 
 const itemsRouter = express.Router()
 const jsonParser = express.json()
-
+//sanitizes items 
 const sanitizeitems = items => ({
     id: items.id,
     name: xss(items.name),
     location: xss(items.location)
 })
-
+//provides the code block for the get request
 itemsRouter
     .route('/')
     .get((req, res, next) => {
@@ -24,6 +24,8 @@ itemsRouter
         })
         .catch(next)
     })
+    //provides the code block for the post request
+
     .post(jsonParser, (req, res, next) => {
         const { name, location } = req.body
         const newItems = {name, location}
@@ -43,7 +45,7 @@ itemsRouter
             })
             .catch(next)
     })
-
+//gets item by item id
 itemsRouter
     .route('/:id')
     .all((req, res, next) => {
